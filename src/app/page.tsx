@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main className="h-screen bg-zinc-950 flex flex-col items-center justify-center">
       <form
-        onSubmit={handleSubmit(createUser)}
+        onSubmit={handleSubmit(createUser)
         className="flex flex-col gap-4 w-full max-w-xs"
       >
         <div className="flex flex-col gap-1">
@@ -62,7 +62,7 @@ export default function Home() {
           Formulário enviado com sucesso!
         </div>
       )}
-     
+    
     </main>
   );
 }
