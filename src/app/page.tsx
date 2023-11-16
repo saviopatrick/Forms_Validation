@@ -10,7 +10,7 @@ const createUserFormSchema = z.object({
     .nonempty('O e-mail é obrigatório')
     .email('Formato de e-mail inválido'),
   password: z.string()
-    .min(6, 'A senha precisa ter no mínimo 6 caracteres'),
+    .min(6, 'A senha precisa ter no mínimo 6 caracteres.'),
 });
 
 type CreateUserFormData = z.infer<typeof createUserFormSchema>;
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main className="h-screen bg-zinc-950 flex flex-col items-center justify-center">
       <form
-        onSubmit={handleSubmit(createUser)
+        onSubmit={handleSubmit(createUser)}
         className="flex flex-col gap-4 w-full max-w-xs"
       >
         <div className="flex flex-col gap-1">
